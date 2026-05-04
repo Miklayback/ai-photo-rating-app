@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuraFrame Photo Rating</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">AI photo rating</p>
+          <h1 id="page-title">AuraFrame</h1>
+          <p class="lede">
+            Upload a portrait, product shot, or social photo and get a fast read on what works.
+          </p>
+        </div>
+
+        <div class="app-grid" aria-label="Photo rating tool">
+          <section class="upload-panel" aria-labelledby="upload-title">
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker">Photo</p>
+                <h2 id="upload-title">Upload image</h2>
+              </div>
+              <span class="status-pill" id="uploadStatus">No file</span>
+            </div>
+
+            <label class="drop-zone" id="dropZone">
+              <input id="photoInput" type="file" accept="image/*" />
+              <span class="drop-zone-title">Choose a photo</span>
+              <span class="drop-zone-copy">JPG, PNG, WebP, or GIF</span>
+            </label>
+
+            <div class="preview-frame" id="previewFrame">
+              <img id="photoPreview" alt="Uploaded photo preview" />
+              <div class="preview-empty" id="previewEmpty">
+                <span class="preview-mark">AF</span>
+                <p>Your preview will appear here</p>
+              </div>
+            </div>
+
+            <button class="primary-button" id="rateButton" type="button" disabled>
+              Rate my photo
+            </button>
+          </section>
+
+          <section class="results-panel" aria-labelledby="results-title">
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker">Feedback</p>
+                <h2 id="results-title">AI rating</h2>
+              </div>
+              <span class="status-pill ready">Mocked</span>
+            </div>
+
+            <div class="score-block" aria-live="polite">
+              <span class="score-label">Score</span>
+              <strong id="scoreValue">--</strong>
+              <span id="scoreCaption">Upload a photo to start.</span>
+            </div>
+
+            <div class="feedback-list">
+              <article class="feedback-item">
+                <span class="feedback-label">Lighting</span>
+                <p id="lightingFeedback">Waiting for an image.</p>
+              </article>
+              <article class="feedback-item">
+                <span class="feedback-label">Composition</span>
+                <p id="compositionFeedback">Waiting for an image.</p>
+              </article>
+              <article class="feedback-item">
+                <span class="feedback-label">Editing suggestions</span>
+                <p id="editingSuggestions">Waiting for an image.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
