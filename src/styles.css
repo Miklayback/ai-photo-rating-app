@@ -66,10 +66,10 @@ p {
 }
 
 h1 {
-  max-width: 10ch;
+  max-width: 8ch;
   margin-bottom: 12px;
-  font-size: clamp(3rem, 12vw, 6.7rem);
-  line-height: 0.88;
+  font-size: clamp(2.8rem, 10vw, 6rem);
+  line-height: 1;
 }
 
 h2 {
@@ -292,6 +292,11 @@ h2 {
   margin: 8px 0 0;
   color: #3d4b54;
   line-height: 1.55;
+}
+
+.summary-item {
+  border-color: rgba(231, 111, 81, 0.34);
+  background: linear-gradient(135deg, rgba(231, 111, 81, 0.08), rgba(244, 201, 93, 0.16));
 }
 
 @media (max-width: 860px) {
